@@ -394,3 +394,18 @@ a:link { text-decoration: none; }
     width: 50%;
   }
 }
+
+@media screen and (min-width: 992px) {
+  .salads, .flatbreads, .coffee-left, .coffee-right, .other-hot-drinks, .cold-drinks {
+    width: 50%;
+  }
+  .on-the-go, .open-toasts {
+    width: 100%;
+  }
+  .menu-contents {
+    position: relative;
+    top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  }
+}
