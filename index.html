@@ -13,8 +13,8 @@
 <body>
 
     <header class="header">
-        <div class="row">
-          <div class="burger-container col-2 col-md-1">
+      <div class="row">
+        <div class="burger-container col-2 col-md-1">
           <button id="burger-menu" class="burger-btn" onclick="burgerDropMenu()"; aria-label="Main Menu">
             <svg width="100" height="100" viewBox="0 0 100 100">
               <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
@@ -22,20 +22,63 @@
               <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
             </svg>
           </button>
-          </div>
-          <div class="offset-1 offset-md-2 col-6 text-center">
-            <a href="index.html"><h1>
+        </div>
+        <div class="offset-1 offset-md-2 col-6 text-center">
+          <a href="index.html"><h1>
             <span class="brand-name-top">J J</span><br>
             <span class="brand-name-btm">coffee</span>
-            </h1></a>
-          </div>
-          <div class="basket-container">
+            </h1>
+          </a>
+        </div>
+        <div class="basket-container">
           <div class="basket">
             <i class="fas fa-shopping-basket"></i>
           </div>
         </div> 
+      </div>
+    </header>
+
+    
+
+    <div class="hero-cards-group d-lg-flex">
+     
+      <div class="hero-card coffee-hero coffee-nav">
+        <video class="video-hero d-none d-lg-block d-xl-block" autoplay muted loop id="myVideo">
+            <source src="assets/videos/coffee.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>  
+        <div class="caption">
+         <a href="coffee.html"><h2 class="caption-text text-center">Coffee</h2></a>
+        </div>  
+      </div>
+       
+      <div class="hero-card menu-hero menu-nav">
+        <video class="video-hero d-none d-lg-block d-xl-block" autoplay muted loop id="myVideo">
+            <source src="assets/videos/food.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>  
+        <div class="caption">
+          <a href="food.html"><p class="caption-text text-center">Food</p></a>
+        </div>  
+      </div>
+     
+      <div class="hero-card meetings-hero meeting-rooms-nav">
+        <div class="caption">
+          <a href="meetings.html"><h2 class="caption-text text-center">Meetings</h2></a>
         </div>
-      </header>
+      </div>
+  
+      <div class="hero-card find-us-hero">
+        <video class="video-hero d-none d-lg-block d-xl-block" autoplay muted loop id="myVideo">
+            <source src="assets/videos/Findus.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>   
+        <div class="caption">
+          <a href="findus.html"><p class="caption-text text-center">Find Us</p></a>
+        </div>  
+      </div>
+  
+    </div>
     
 </body>
 </html>

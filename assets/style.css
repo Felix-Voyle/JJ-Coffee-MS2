@@ -157,3 +157,100 @@ a:link { text-decoration: none; }
     width: 18rem;
     padding: 2rem;
   }
+
+  .basket-container {
+    height: 85px;
+  }
+  
+  .basket {
+      font-size: 38px;
+      position: absolute;
+      top: 12px;
+      right: 15px;
+  }
+
+  /*------- Home page ---------*/
+
+.hero-cards-group {
+  width: 100vw;
+  margin-top: 10px;
+  position: absolute;
+}
+
+.hero-card {
+  margin-top: 80px;
+  height: 25vh;
+  margin: 6px;
+  z-index: 1;
+  overflow: hidden;
+  border: 4px solid #141414;
+}
+
+.menu-hero {
+  background-image: url(../assets/images/food.jpg);
+    background-position: 50% 40%;
+}
+
+.meetings-hero {
+  background: url(../assets/images/meetings.jpg);
+    background-position: 40% 50%;
+}
+
+.coffee-hero {
+  background: url(../assets/images/coffee.jpg);
+    background-position: 40% 50%;
+}
+
+.find-us-hero {
+  background: url(../assets/images/st-pauls.jpg);
+    background-position: 40% 45%;
+}
+
+.menu-hero, .meetings-hero, .coffee-hero, .find-us-hero {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: fixed;
+    position: relative;
+}
+
+.caption { 
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    bottom:0; 
+    width:100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.caption:hover {
+    background: rgba(0, 0, 0, 0.3);
+    transition: 1s;
+}
+
+.caption-text, #nav-home, #nav-drinks, #nav-food, #nav-meetings, #nav-findus {
+  font-family: 'Londrina Outline', cursive;
+  color: white;
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+.video-hero {
+  position: absolute;
+  height: 100%;
+  left: 50%; 
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 992px) {
+  .hero-card {
+    width: 25%;
+    height: 80vh;
+  }
+  .coffee-hero, .menu-hero, .find-us-hero, .meetings-hero {
+  background: none;
+    }
+}
