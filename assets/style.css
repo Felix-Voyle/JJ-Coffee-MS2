@@ -385,3 +385,12 @@ a:link { text-decoration: none; }
     display: block;
   }
 }
+
+/* ----- food and drinks menus-----*/
+
+
+@media screen and (min-width: 576px) {
+  .left-extras, .right-extras{
+    width: 50%;
+  }
+}
