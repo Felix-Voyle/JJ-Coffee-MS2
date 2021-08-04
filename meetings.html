@@ -50,7 +50,7 @@
       <div class="row">
         <h2 class="meeting-heading text-center">Meetings</h2>
       </div>
-      <form name="meetingRoom" id="meetingRoom" onsubmit="return validateForm()">
+      <form name="meetingRoom" id="meetingRoom">
         <div class="row">
           <div class="form-left col-md-6">
             <input type="email" class="form-control" id="Email" placeholder="name@example.com">
@@ -61,7 +61,7 @@
         </div>    
         <div class="row">
           <div class="form-left col-md-6">
-            <select id="inputLocation" name="inputLocation" onchange="populate(this.id,'inputRoom')" class="form-control">
+            <select id="inputLocation" name="inputLocation" class="form-control">
               <option value="Choose a location...">Choose a location...</option>
               <option value="Fleet Street">Fleet Street</option>
               <option value="Record Hall">Record Hall</option>

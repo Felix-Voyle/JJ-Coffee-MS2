@@ -304,3 +304,69 @@ a:link { text-decoration: none; }
   background: none;
     }
 }
+
+/*------meetings----*/
+
+.meetings-container {
+  height: 85vh;
+  position: absolute; 
+}
+
+.form-background {
+  background-color: #ADADAD;
+  height: 80vh;
+  width: 90vw;
+  margin-left: 6%;
+  margin-right: auto;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  overflow: scroll;
+}
+
+.meeting-heading {
+  font-family: 'Zen Tokyo Zoo', cursive;
+  color: #deecd5;
+  letter-spacing: 8px;
+  position: fixed;
+  top: 10px;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.meetings-text {
+  background-color: #141414;
+  border: 2px solid #deecd5;
+  border-radius: 5px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  margin-top: 20px;
+  color: #ADADAD;
+  font-size: 22px;
+  font-weight: 200;
+}
+
+#meetingRoom {
+  width: 80%;
+  margin-left: auto;
+  margin-right: 20%;
+  margin-top: 50px;
+  position: relative;
+  top: 54%;
+  left: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.submit-btn {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  margin-bottom: .6em;
+}
