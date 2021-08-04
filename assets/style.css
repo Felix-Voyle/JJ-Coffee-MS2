@@ -523,3 +523,15 @@ margin-left: auto;
 margin-right: auto;
 width: 80%;
 }
+
+@media screen and (min-width: 576px) {
+  .get-in-touch-right {
+    width: 63%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .get-in-touch-left, .get-in-touch-right {
+    width: 50%;
+  }
+}
