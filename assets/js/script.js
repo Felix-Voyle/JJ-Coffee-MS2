@@ -1,3 +1,4 @@
+//burger icon animation and dropdown menu
 function burgerDropMenu() {
   var burger = document.getElementById('burger-menu');
   var links = document.getElementById("navLinks");
@@ -10,6 +11,7 @@ function burgerDropMenu() {
   }
 }
 
+//alternates between menus
 function alternateMenu() {
   $('.secondary-menu').hide();
   $('.primary-menu-btn, .secondary-menu-btn').click(function(){
