@@ -51,22 +51,39 @@ function addItem(key) {
           div = document.createElement('div');
           div.id = key;
           
-          var elemName = this.addElement(div, 'span', 'itemName-cart', item.name);
-          var elemPrice = this.addElement(div, 'span', 'itemPrice-cart', '£' + item.price);
-          var elemButtonDec = this.addButton(div, 'button', 'button-cart qty-section', "-", () => incItem(key, -1));
-          var elemQty = this.addElement(div, 'span', 'qty-cart qty-section', "1");
-          var elemButtonInc = this.addButton(div, 'button', 'button-cart qty-section', "+", () => incItem(key, 1));
-          var elemButtonDelete = this.addButton(div, 'button', 'delete-btn-cart', "Delete", () => deleteItem(key));
+          var elemName = this.addElement(div, 'span', 'itemName', item.name);
+          var elemPrice = this.addElement(div, 'span', 'itemPrice', '£' + item.price);
+          var elemButtonDec = this.addButton(div, 'button', 'button', "-", () => incItem(key, -1));
+          var elemQty = this.addElement(div, 'span', 'qty', "1");
+          var elemButtonInc = this.addButton(div, 'button', 'button', "+", () => incItem(key, 1));
+          var elemButtonDelete = this.addButton(div, 'button', 'button', "Delete", () => deleteItem(key));
           cart.appendChild(div);
           item.qty ++
+          cartTotal();
       } else if (item.qty < item.max) {
           var elemQty = div.getElementsByClassName("qty")[0];
           elemQty.innerHTML = Number(elemQty.innerHTML) + 1;
           item.qty ++
+          cartTotal();
       }
   }
   return div
 }
+
+//increases and decreases items quantity in basket
+function incItem(key, inc) {
+  var item = items[key];
+  var div = document.getElementById(key);
+  var elemQty = div.getElementsByClassName("qty")[0];
+  const value = Number(elemQty.innerHTML) + inc;
+  if (value >= item.min && value <= item.max) {
+      elemQty.innerHTML = value;
+      item.qty = value
+  } else if (value < item.min) {
+      div.remove();
+      item.qty = 0
+    }
+  }
 
 // function to add Elements
 function addElement(parent, myElement, myClass, myContent) {
