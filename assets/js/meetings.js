@@ -69,4 +69,25 @@ for(var i = 0; i < options.length; i++) {
     el.textContent = opt + ':00'
     el.value = opt + ':00'
     }
-}  
+}
+
+// Validates form
+function validateForm() {
+  let location = document.getElementById('inputLocation').value
+  let room = document.getElementById('inputRoom').value
+  let people = document.getElementById('numberPeople').value
+  let time = document.getElementById('inputPeople').value
+  if (location == "Choose a location...") {
+    alert("Choose a location");
+    return false;
+  } else if (room == "Choose a room...") {
+     alert("Choose a room");
+    return false; 
+  } else if (people == "Choose number of people...") {
+    alert("Choose number of people");
+   return false; 
+ } else if (time == "Choose a time...") {
+    alert("Choose a time");
+   return false; 
+ }
+}
