@@ -51,4 +51,22 @@ function populateNumbers(s1, s2, s3) {
           s2.options.add(newOption);
       }
     }
-  }  
+  }
+
+// populates choose time 
+var select = document.getElementById("inputTime");
+var options = ["9", "9", "10", "10", "11", "11", "12", "12", "13", "13", "14", "14", "15", "15", "16", "16", "17", "17",];
+for(var i = 0; i < options.length; i++) {
+    var opt = options[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    select.appendChild(el);
+    if (i % 2) {
+    el.textContent = opt + ':30'
+    el.value = opt + ':30'
+    } else {
+    el.textContent = opt + ':00'
+    el.value = opt + ':00'
+    }
+}  
