@@ -113,16 +113,17 @@ a:link { text-decoration: none; }
       right: 15px;
   }
   
-  .item-count-container {
+  #itemCounter {
     position: absolute;
     top: 48px;
     right: 48px;
-    background-color: #ADADAD;
-    border: 1px solid #ADADAD;
+    background-color: #FDBE11;
+    border: 3px solid #ADADAD;
     border-radius: 50px;
-    height: 24px;
-    width: 24px;
-  }
+    height: 30px;
+    width: 30px;
+    display: none;
+    }
   
   .basket-info-container {
     position: absolute;

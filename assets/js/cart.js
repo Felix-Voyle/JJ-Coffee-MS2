@@ -79,9 +79,11 @@ function incItem(key, inc) {
   if (value >= item.min && value <= item.max) {
       elemQty.innerHTML = value;
       item.qty = value
+      itemTotal();
   } else if (value < item.min) {
       div.remove();
       item.qty = 0
+      itemTotal();
     }
   }
 
@@ -126,8 +128,10 @@ function itemTotal() {
       }, 0);
      if (sum >= 1) {
       counter.innerHTML = sum
+      counter.style.display = "block"
      } else if (sum < 1) {
      counter.innerHTML = ""
+     counter.style.display = "none"
      }
   } 
 
