@@ -59,12 +59,12 @@ function addItem(key) {
           var elemButtonDelete = this.addButton(div, 'button', 'button', "Delete", () => deleteItem(key));
           cart.appendChild(div);
           item.qty ++
-          cartTotal();
+          itemTotal();
       } else if (item.qty < item.max) {
           var elemQty = div.getElementsByClassName("qty")[0];
           elemQty.innerHTML = Number(elemQty.innerHTML) + 1;
           item.qty ++
-          cartTotal();
+          itemTotal();
       }
   }
   return div
@@ -110,8 +110,26 @@ function deleteItem(key) {
   var item = items[key];
   div.remove();
   item.qty = 0
-  cartTotal();
+  itemTotal();
 }
+
+//counts number of items in basket 
+function itemTotal() {
+  var counter = document.getElementById('itemCounter');
+    var totalItems = [];
+      for (let item in items) {
+    let itemQty = (items[item].qty);
+    totalItems.push(itemQty);
+    }
+    var sum = totalItems.reduce(function(a, b){
+          return a + b;
+      }, 0);
+     if (sum >= 1) {
+      counter.innerHTML = sum
+     } else if (sum < 1) {
+     counter.innerHTML = ""
+     }
+  } 
 
 
 
