@@ -41,6 +41,33 @@ const items = {
   "salmon": { name: "Salmon", price: 2,  min: 1, max: 10, qty: 0 }
 }
 
+//function to add items to cart
+function addItem(key) {
+  var cart = document.getElementById("cart");
+  var div = document.getElementById(key);
+  var item = items[key];
+  if (item != null) {
+      if (div == null) {
+          div = document.createElement('div');
+          div.id = key;
+          
+          var elemName = this.addElement(div, 'span', 'itemName-cart', item.name);
+          var elemPrice = this.addElement(div, 'span', 'itemPrice-cart', '£' + item.price);
+          var elemButtonDec = this.addButton(div, 'button', 'button-cart qty-section', "-", () => incItem(key, -1));
+          var elemQty = this.addElement(div, 'span', 'qty-cart qty-section', "1");
+          var elemButtonInc = this.addButton(div, 'button', 'button-cart qty-section', "+", () => incItem(key, 1));
+          var elemButtonDelete = this.addButton(div, 'button', 'delete-btn-cart', "Delete", () => deleteItem(key));
+          cart.appendChild(div);
+          item.qty ++
+      } else if (item.qty < item.max) {
+          var elemQty = div.getElementsByClassName("qty")[0];
+          elemQty.innerHTML = Number(elemQty.innerHTML) + 1;
+          item.qty ++
+      }
+  }
+  return div
+}
+
 // function to add Elements
 function addElement(parent, myElement, myClass, myContent) {
   var elem = document.createElement(myElement);
@@ -58,6 +85,15 @@ function addButton(parent, myElement, myClass, myTitle, myFunction) {
   elem.addEventListener("click", myFunction);
   parent.appendChild(elem);
   return elem;
+}
+
+//deletes item from cart
+function deleteItem(key) {
+  var div = document.getElementById(key);
+  var item = items[key];
+  div.remove();
+  item.qty = 0
+  cartTotal();
 }
 
 
