@@ -40,3 +40,12 @@ const items = {
   "egg": { name: "Egg", price: 1, min: 1, max: 10, qty: 0 },
   "salmon": { name: "Salmon", price: 2,  min: 1, max: 10, qty: 0 }
 }
+
+// function to add Elements
+function addElement(parent, myElement, myClass, myContent) {
+  var elem = document.createElement(myElement);
+  elem.className = myClass;
+  elem.innerHTML = myContent;
+  parent.appendChild(elem);
+  return elem;
+}
