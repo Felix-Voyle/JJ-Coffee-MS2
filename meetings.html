@@ -61,7 +61,7 @@
         </div>    
         <div class="row">
           <div class="form-left col-md-6">
-            <select id="inputLocation" name="inputLocation" class="form-control">
+            <select id="inputLocation" name="inputLocation" onchange="populate(this.id,'inputRoom')" class="form-control">
               <option value="Choose a location...">Choose a location...</option>
               <option value="Fleet Street">Fleet Street</option>
               <option value="Record Hall">Record Hall</option>
@@ -97,6 +97,7 @@
 
 <script src='assets/js/jquery-3.6.0.js' type='text/javascript'></script>
 <script src='assets/js/script.js' type="text/javascript"></script>
+<script src='assets/js/meetings.js' type="text/javascript"></script>
 
 </body>
 </html>  
