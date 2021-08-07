@@ -49,3 +49,16 @@ function addElement(parent, myElement, myClass, myContent) {
   parent.appendChild(elem);
   return elem;
 }
+
+//function to add button element with event listener
+function addButton(parent, myElement, myClass, myTitle, myFunction) {
+  var elem = document.createElement(myElement);
+  elem.className = myClass;
+  elem.innerHTML = myTitle;
+  elem.addEventListener("click", myFunction);
+  parent.appendChild(elem);
+  return elem;
+}
+
+
+
