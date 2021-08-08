@@ -18,6 +18,7 @@ function basketShow(){
 
     basketContainer.classList.toggle('basket-show');
     basketInfo.classList.toggle('basket-info-show');
+    
   }; 
 
 //alternates between menus

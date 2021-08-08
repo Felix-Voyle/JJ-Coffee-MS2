@@ -120,6 +120,8 @@ function deleteItem(key) {
 //counts number of items in basket 
 function itemTotal() {
   var counter = document.getElementById('itemCounter');
+  var emptyCartMsg = document.getElementById('emptyCartMsg');
+  var cart = document.getElementById('cart');
     var totalItems = [];
       for (let item in items) {
     let itemQty = (items[item].qty);
@@ -131,9 +133,11 @@ function itemTotal() {
      if (sum >= 1) {
       counter.innerHTML = sum
       counter.style.display = "block"
+      emptyCartMsg.style.display = "none"
      } else if (sum < 1) {
      counter.innerHTML = ""
      counter.style.display = "none"
+     emptyCartMsg.style.display = "block" 
      }
   } 
 

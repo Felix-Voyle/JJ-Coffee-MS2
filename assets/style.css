@@ -160,6 +160,18 @@ a:link { text-decoration: none; }
       overflow: hidden;
   }
 
+  .empty-crt-box {
+    background-color: white;
+    height: 50px;
+    width: 268px;
+    border: 2px solid #141414;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+  }
+
   .itemCartRow {
     margin-bottom: 15px;
   }
@@ -220,7 +232,18 @@ a:link { text-decoration: none; }
     margin-top: 3px;
   }
 
-  
+  .cart-total-row {
+    position: absolute;
+    bottom: 10px;
+    left: 38px;
+  }
+
+  @media screen and (min-width: 992px) {
+    .basket-info-show {
+      width: 22rem;
+      padding: 2rem;
+    }
+  }
 
   /*-----dropdwn nav ------*/
 
