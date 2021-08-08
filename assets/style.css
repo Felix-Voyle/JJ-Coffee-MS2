@@ -43,10 +43,6 @@ a:link { text-decoration: none; }
   }
 
   /*-----burger-and-basket-icons----*/
-
-.burger-container, .basket-container  {
-    height: 85px;
-  }
   
   .burger-btn {
     background-color: transparent;
@@ -133,10 +129,6 @@ a:link { text-decoration: none; }
     width: 0rem;
     z-index: 2;
     overflow: hidden;
-  }
-
-  .basket-container {
-    height: 85px;
   }
   
   .basket {
