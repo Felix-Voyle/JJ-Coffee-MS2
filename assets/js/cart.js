@@ -18,7 +18,7 @@ const items = {
   "matchatea": { name: "Matcha Tea", price: 3,  min: 1, max: 10, qty: 0 },
   "matchalatte": { name: "Matcha Latte", price: 2.8, min: 1, max: 10, qty: 0 },
   "hotchocolate": { name: "Hot Chocolate", price: 3,  min: 1, max: 10, qty: 0 },
-  "nutellahotchoc": { name: "Nutella Hot Chocolate", price: 3.4, min: 1, max: 10, qty: 0 },
+  "nutellahotchoc": { name: "Nutella Hot Choc", price: 3.4, min: 1, max: 10, qty: 0 },
   "chailatte": { name: "Chai Latte", price: 2.9,  min: 1, max: 10, qty: 0 },
   "icedtea": { name: "Iced Tea", price: 2.8, min: 1, max: 10, qty: 0 },
   "icedmatcha": { name: "Iced Matcha", price: 3,  min: 1, max: 10, qty: 0 },
@@ -32,9 +32,9 @@ const items = {
   "stuffedcroissant": { name: "Stuffed Croissant", price: 4,  min: 1, max: 10, qty: 0 },
   "avocado": { name: "Avocado toast", price: 4.5, min: 1, max: 10, qty: 0 },
   "avopesto": { name: "Avocado Pesto", price: 5,  min: 1, max: 10, qty: 0 },
-  "smokedsalmon": { name: "Iced Latte", price: 5.5,  min: 1, max: 10, qty: 0 },
-  "flatbreadone": { name: "Flatbread One Topping", price: 6, min: 1, max: 10, qty: 0 },
-  "flatbreadtwo": { name: "Flatbread Two Toppings", price: 7,  min: 1, max: 10, qty: 0 },
+  "smokedsalmon": { name: "Smoked Salmon", price: 5.5,  min: 1, max: 10, qty: 0 },
+  "flatbreadone": { name: "Flatbread One", price: 6, min: 1, max: 10, qty: 0 },
+  "flatbreadtwo": { name: "Flatbread Two", price: 7,  min: 1, max: 10, qty: 0 },
   "saladbox": { name: "Salad Box", price: 6,  min: 1, max: 10, qty: 0 },
   "feta": { name: "Feta", price: 0.5,  min: 1, max: 10, qty: 0 },
   "halloumi": { name: "Halloumi", price: 1.5,  min: 1, max: 10, qty: 0 },
@@ -50,14 +50,15 @@ function addItem(key) {
   if (item != null) {
       if (div == null) {
           div = document.createElement('div');
+          div.className = ('itemCartRow');
           div.id = key;
           
-          var elemName = this.addElement(div, 'span', 'itemName', item.name);
-          var elemPrice = this.addElement(div, 'span', 'itemPrice', '£' + item.price);
-          var elemButtonDec = this.addButton(div, 'button', 'button', "-", () => incItem(key, -1));
-          var elemQty = this.addElement(div, 'span', 'qty', "1");
-          var elemButtonInc = this.addButton(div, 'button', 'button', "+", () => incItem(key, 1));
-          var elemButtonDelete = this.addButton(div, 'button', 'button', "Delete", () => deleteItem(key));
+          var elemName = this.addElement(div, 'span', 'itemNameCart', item.name);
+          var elemPrice = this.addElement(div, 'span', 'itemPriceCart', '£' + item.price);
+          var elemButtonDec = this.addButton(div, 'button', 'button btnCart qtySectionDec' , "-", () => incItem(key, -1));
+          var elemQty = this.addElement(div, 'span', 'qty qtySectionNum text-center', "1");
+          var elemButtonInc = this.addButton(div, 'button', 'button btnCart qtySectionInc', "+", () => incItem(key, 1));
+          var elemButtonDelete = this.addButton(div, 'button', 'button btnCartDel', "Delete", () => deleteItem(key));
           cart.appendChild(div);
           item.qty ++
           itemTotal();

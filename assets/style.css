@@ -42,7 +42,7 @@ a:link { text-decoration: none; }
     transform: translateX(-50%);
   }
 
-  /*-----burger-and-basket-icons---*/
+  /*-----burger-and-basket-icons----*/
 
 .burger-container, .basket-container  {
     height: 85px;
@@ -134,28 +134,6 @@ a:link { text-decoration: none; }
     z-index: 2;
     overflow: hidden;
   }
-  
-  .basket-info {
-      position: absolute;
-      min-height: 10rem;
-      background: #ADADAD;
-      top: 0;
-      right: 0;
-      transition: all 0.3s ease-in-out;
-      width: 0rem;
-      z-index: 3;
-      overflow: hidden;
-  }
-  
-  .basket-show {
-    width: 100%;
-    padding: 2rem;
-  }
-  
-  .basket-info-show {
-    width: 18rem;
-    padding: 2rem;
-  }
 
   .basket-container {
     height: 85px;
@@ -167,6 +145,82 @@ a:link { text-decoration: none; }
       top: 12px;
       right: 15px;
   }
+
+  /*--------cart -------*/
+
+   .basket-info {
+      position: absolute;
+      min-height: 10rem;
+      background: #ADADAD;
+      top: 0;
+      right: 0;
+      transition: all 0.3s ease-in-out;
+      width: 0rem;
+      z-index: 3;
+      overflow: hidden;
+  }
+
+  .itemCartRow {
+    margin-bottom: 15px;
+  }
+
+  .basket-show {
+    width: 100%;
+    padding: 1.8rem;
+  }
+  
+  .basket-info-show {
+    width: 19rem;
+    padding: 2rem;
+  }
+
+  .qtySectionInc {
+    position: absolute;
+    right: 75px;
+    background-color: green;
+  }
+
+  .qtySectionDec {
+    position: absolute;
+    right: 120px;
+    background-color: rgb(185, 57, 57);
+  }
+
+  .qtySectionNum {
+    position: absolute;
+    right: 100px;
+    background-color: white;
+    height: 25px;
+    width: 20px;
+    font-size: 16px;
+  }
+
+  .btnCartDel {
+    position: absolute;
+    right: 8px;
+    background-color: rgb(185, 57, 57);
+  }
+
+  .btnCartDel, .qtySectionDec, .qtySectionInc {
+    font-size: 14px;
+    height: 25px;
+    color: #ecebeb;
+  }
+
+  .itemNameCart {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+
+  .itemPriceCart {
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    left: 170px;
+    margin-top: 3px;
+  }
+
+  
 
   /*-----dropdwn nav ------*/
 
