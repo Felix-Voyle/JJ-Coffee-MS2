@@ -10,7 +10,6 @@ html,body
     background-color: #deecd5;
     font-family: 'Ubuntu', sans-serif;
     font-size: 18px;
-    font-weight: bold;
 }
 
 a:link { text-decoration: none; }
@@ -420,7 +419,7 @@ height: 30px;
 width: 30px;
 }
 
-.on-the-go .row, .left-extras .row, .right-extras .row, .coffee-left .row, .coffee-right .row, .other-hot-drinks .row, .cold-drinks .row {
+.on-the-go .row, .left-extras .row, .right-extras .row, .coffee-left .row, .coffee-right .row, .other-hot-drinks .row, .cold-drinks .row, .flatbread-item {
 margin-bottom: 10px;
 }
 
@@ -477,6 +476,24 @@ color: #FDBE11;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   }
+  .on-the-go .row, .left-extras .row, .right-extras .row, .coffee-left .row, .coffee-right .row, .other-hot-drinks .row, .cold-drinks .row {
+    margin-bottom: 30px;
+    }
+  .open-toasts-item {
+    margin-top: 25px;
+  }
+  .flatbread-item {
+    margin-bottom: 20px;
+  }
+  .salad-item {
+    margin-top: 88px;
+  } 
+}
+
+@media screen and (min-width: 1635px) {
+  .salad-item {
+    margin-top: 62px;
+  } 
 }
 
 /*-------find us------*/
