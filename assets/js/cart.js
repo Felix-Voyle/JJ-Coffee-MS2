@@ -45,45 +45,45 @@ const items = {
 //function to add items to cart
 function addItem(key) {
   var cart = document.getElementById("cart");
-  var div = document.getElementById(key);
+  var itemElem = document.getElementById(key);
   var item = items[key];
   if (item != null) {
-      if (div == null) {
-          div = document.createElement('div');
-          div.className = ('itemCartRow');
-          div.id = key;
+      if (itemElem == null) {
+          itemElem = document.createElement('div');
+          itemElem.className = ('itemCartRow');
+          itemElem.id = key;
           
-          var elemName = this.addElement(div, 'span', 'itemNameCart', item.name);
-          var elemPrice = this.addElement(div, 'span', 'itemPriceCart', '£' + item.price);
-          var elemButtonDec = this.addButton(div, 'button', 'button btnCart qtySectionDec' , "-", () => incItem(key, -1));
-          var elemQty = this.addElement(div, 'span', 'qty qtySectionNum text-center', "1");
-          var elemButtonInc = this.addButton(div, 'button', 'button btnCart qtySectionInc', "+", () => incItem(key, 1));
-          var elemButtonDelete = this.addButton(div, 'button', 'button btnCartDel', "Delete", () => deleteItem(key));
-          cart.appendChild(div);
+          var Name = this.addElement(itemElem, 'span', 'itemNameCart', item.name);
+          var Price = this.addElement(itemElem, 'span', 'itemPriceCart', '£' + item.price);
+          var ButtonDec = this.addButton(itemElem, 'button', 'button btnCart qtySectionDec' , "-", () => incItem(key, -1));
+          var Qty = this.addElement(itemElem, 'span', 'qty qtySectionNum text-center', "1");
+          var ButtonInc = this.addButton(itemElem, 'button', 'button btnCart qtySectionInc', "+", () => incItem(key, 1));
+          var ButtonDelete = this.addButton(itemElem, 'button', 'button btnCartDel', "Delete", () => deleteItem(key));
+          cart.appendChild(itemElem);
           item.qty ++
           itemTotal();
       } else if (item.qty < item.max) {
-          var elemQty = div.getElementsByClassName("qty")[0];
+          var elemQty = itemElem.getElementsByClassName("qty")[0];
           elemQty.innerHTML = Number(elemQty.innerHTML) + 1;
           item.qty ++
           itemTotal();
       }
   }
-  return div
+  return itemElem
 }
 
 //increases and decreases items quantity in basket
 function incItem(key, inc) {
   var item = items[key];
-  var div = document.getElementById(key);
-  var elemQty = div.getElementsByClassName("qty")[0];
+  var itemElem = document.getElementById(key);
+  var elemQty = itemElem.getElementsByClassName("qty")[0];
   const value = Number(elemQty.innerHTML) + inc;
   if (value >= item.min && value <= item.max) {
       elemQty.innerHTML = value;
       item.qty = value
       itemTotal();
   } else if (value < item.min) {
-      div.remove();
+      itemElem.remove();
       item.qty = 0
       itemTotal();
     }
@@ -110,36 +110,43 @@ function addButton(parent, myElement, myClass, myTitle, myFunction) {
 
 //deletes item from cart
 function deleteItem(key) {
-  var div = document.getElementById(key);
+  var itemElem = document.getElementById(key);
   var item = items[key];
-  div.remove();
+  itemElem.remove();
   item.qty = 0
   itemTotal();
 }
 
-//counts number of items in basket 
+//counts number of items in basket and works out toalprice 
 function itemTotal() {
   var counter = document.getElementById('itemCounter');
   var emptyCartMsg = document.getElementById('emptyCartMsg');
   var cart = document.getElementById('cart');
+  var cartPriceTotal = document.getElementById('totalAmmount');
     var totalItems = [];
+    var totalPrice = [];
       for (let item in items) {
     let itemQty = (items[item].qty);
+    let price = (items[item].qty) * (items[item].price);
     totalItems.push(itemQty);
+    totalPrice.push(price);
     }
-    var sum = totalItems.reduce(function(a, b){
+    var totalItems = totalItems.reduce(function(a, b){
           return a + b;
       }, 0);
-     if (sum >= 1) {
-      counter.innerHTML = sum
+      var totalPrice = totalPrice.reduce(function(a, b){
+        return a + b;
+    }, 0); 
+      var priceRounded = totalPrice.toFixed(2) 
+     if (totalItems >= 1) {
+      counter.innerHTML = totalItems
       counter.style.display = "block"
+      cartPriceTotal.innerHTML = "£" + priceRounded
       emptyCartMsg.style.display = "none"
-     } else if (sum < 1) {
+     } else if (totalItems < 1) {
      counter.innerHTML = ""
      counter.style.display = "none"
+     cartPriceTotal.innerHTML = ""
      emptyCartMsg.style.display = "block" 
      }
   } 
-
-
-

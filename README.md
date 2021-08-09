@@ -14,8 +14,7 @@ This would streamline the service that the company offers for the meeting rooms.
 - As a first time visitor I want to be able to see past reviews/experiecnes of the company 
 - As a first time user I want to be able to navigate around the site seamlessly 
  
-
-### Returning Visitor Goals
+ ### Returning Visitor Goals
 - As a returning visitor I want to find contact information to enquire about something
 - As a returning visitor I want to book catering for a meeting room
 - As a returning visitor I want to see up to date reviews and experiences   
@@ -31,7 +30,6 @@ This would streamline the service that the company offers for the meeting rooms.
   The colour scheme will be mainly shades of white black and grey in terms of main colours used for the basic site and sections. This will help pictures of colourful food and coffee stand out.
 
 * Typography
-   
 
 * Imagery
   The homepage will consist of 4 main images that stand out and clearly highlight the main purposes of the site. 
@@ -53,6 +51,7 @@ Large Screens - [View](assets/wireframes/lrg-screen-coffee.pdf)
 ### Features to implement in the future
 
 ## Technologies used
+
 ----
 ### Languages used
 - HTML

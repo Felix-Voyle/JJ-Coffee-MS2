@@ -230,6 +230,17 @@ a:link { text-decoration: none; }
     left: 38px;
   }
 
+  .ammountTotal {
+    margin-left: 15px;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .total-txt {
+    font-weight: bold;
+    letter-spacing: 1.4px;
+  }
+
   @media screen and (min-width: 992px) {
     .basket-info-show {
       width: 22rem;
