@@ -232,6 +232,8 @@ a:link { text-decoration: none; }
 
   .ammountTotal {
     margin-left: 15px;
+    font-weight: 400;
+    font-style: italic;
   }
   
   .total-txt {
