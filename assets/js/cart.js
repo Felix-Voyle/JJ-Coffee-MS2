@@ -117,29 +117,36 @@ function deleteItem(key) {
   itemTotal();
 }
 
-//counts number of items in basket 
+//counts number of items in basket and works out toalprice 
 function itemTotal() {
   var counter = document.getElementById('itemCounter');
   var emptyCartMsg = document.getElementById('emptyCartMsg');
   var cart = document.getElementById('cart');
+  var cartPriceTotal = document.getElementById('totalAmmount');
     var totalItems = [];
+    var totalPrice = [];
       for (let item in items) {
     let itemQty = (items[item].qty);
+    let price = (items[item].qty) * (items[item].price);
     totalItems.push(itemQty);
+    totalPrice.push(price);
     }
-    var sum = totalItems.reduce(function(a, b){
+    var totalItems = totalItems.reduce(function(a, b){
           return a + b;
       }, 0);
-     if (sum >= 1) {
-      counter.innerHTML = sum
+      var totalPrice = totalPrice.reduce(function(a, b){
+        return a + b;
+    }, 0); 
+      var priceRounded = totalPrice.toFixed(2) 
+     if (totalItems >= 1) {
+      counter.innerHTML = totalItems
       counter.style.display = "block"
+      cartPriceTotal.innerHTML = "£" + priceRounded
       emptyCartMsg.style.display = "none"
-     } else if (sum < 1) {
+     } else if (totalItems < 1) {
      counter.innerHTML = ""
      counter.style.display = "none"
+     cartPriceTotal.innerHTML = ""
      emptyCartMsg.style.display = "block" 
      }
   } 
-
-
-
