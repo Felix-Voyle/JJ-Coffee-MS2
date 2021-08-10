@@ -463,7 +463,7 @@ a:link { text-decoration: none; }
   margin-left: auto;
   margin-right: 20%;
   position: relative;
-  top: 16rem;
+  top: 17rem;
   left: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -480,18 +480,23 @@ a:link { text-decoration: none; }
   margin-bottom: .6em;
 }
 
+.meetings-info-txt {
+  position: relative;
+  top: 50px;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+
 @media screen and (min-width: 375px) {
   .form-control {
     margin-bottom: 0.8em;
    }
-  .meetingRoom {
-    top: 17rem;
-  } 
 }
 
 @media screen and (min-width: 768px) {
   .form-control {
-   margin-bottom: 3rem;
+   margin-bottom: 2.5rem;
   }
   .form-right {
     position: relative;
@@ -505,13 +510,53 @@ a:link { text-decoration: none; }
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-  }
-  .meetingRoom {
-    top: 50%;
   } 
   .meetings-text {
     display: block;
   }
+}
+
+@media screen and (min-width: 1024px) {
+  .meetingRoom {
+    position: absolute;
+    top: 50%;
+  }
+  .meetings-info-txt {
+    top: 6rem;
+    font-size: 18px;
+  }
+  .meetings-info-txt-row {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .meetingRoom {
+      top: 50%;
+    }
+    .meetings-info-txt {
+      top: 6rem;
+      font-size: 18px;
+    }
+    .meetings-info-txt-row {
+      margin-bottom: 10px;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    .meetingRoom {
+      top: 16rem;
+    }
+    .meetings-info-txt {
+      top: 3rem;
+    }
 }
 
 /* ----- food and drinks menus-----*/
