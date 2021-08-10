@@ -298,6 +298,36 @@ a:link { text-decoration: none; }
   top: 90%
 }
 
+@media screen and (min-width: 992px) {
+  .dropdwn-mnu {
+    position: relative;
+    height: 50px;
+  }
+  .nav-home, .nav-drinks, .nav-food, .nav-meetings, .nav-findus {
+    top: 50%;
+    font-size: 1.9rem;
+  }
+  .nav-home {
+    left: 10%;
+  }
+  
+  .nav-drinks {
+    left: 30%;
+  }
+  
+  .nav-food {
+    left: 50%;
+  }
+  
+  .nav-meetings {
+    left: 70%;
+  }
+  
+  .nav-findus {
+    left: 90%;
+  }
+}
+
   /*------- Home page ---------*/
 
 .hero-cards-group {
