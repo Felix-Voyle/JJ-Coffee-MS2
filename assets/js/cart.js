@@ -61,11 +61,13 @@ function addItem(key) {
           var ButtonDelete = this.addButton(itemElem, 'button', 'button btnCartDel', "Delete", () => deleteItem(key));
           cart.appendChild(itemElem);
           item.qty ++
+          sessionStorage.setItem(item.name, JSON.stringify(item));
           itemTotal();
       } else if (item.qty < item.max) {
           var elemQty = itemElem.getElementsByClassName("qty")[0];
           elemQty.innerHTML = Number(elemQty.innerHTML) + 1;
           item.qty ++
+          sessionStorage.setItem(item.name, JSON.stringify(item));
           itemTotal();
       }
   }
@@ -81,10 +83,12 @@ function incItem(key, inc) {
   if (value >= item.min && value <= item.max) {
       elemQty.innerHTML = value;
       item.qty = value
+      sessionStorage.setItem(item.name, JSON.stringify(item));
       itemTotal();
   } else if (value < item.min) {
       itemElem.remove();
       item.qty = 0
+      sessionStorage.removeItem(item.name)
       itemTotal();
     }
   }
@@ -114,6 +118,7 @@ function deleteItem(key) {
   var item = items[key];
   itemElem.remove();
   item.qty = 0
+  sessionStorage.removeItem(item.name)
   itemTotal();
 }
 
@@ -150,3 +155,6 @@ function itemTotal() {
      emptyCartMsg.style.display = "block" 
      }
   } 
+
+
+
