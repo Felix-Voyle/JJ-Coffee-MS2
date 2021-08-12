@@ -13,13 +13,13 @@ function burgerDropMenu() {
 
 //toggles basket info
 function basketShow(){
-  const basketContainer = document.getElementById('basket-info-container');
-  const basketInfo = document.getElementById('basket-info')
+  var basketContainer = document.getElementById('basket-info-container');
+  var basketInfo = document.getElementById('basket-info');
 
     basketContainer.classList.toggle('basket-show');
     basketInfo.classList.toggle('basket-info-show');
     
-  }; 
+  }  
 
 //alternates between menus
 function alternateMenu() {
