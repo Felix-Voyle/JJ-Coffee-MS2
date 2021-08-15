@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link href="assets/style/style.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init("user_VFr6nuE298lx3NUYI6O1K");
+      })();
+      </script>
 </head>
 <body>
 
@@ -67,7 +75,7 @@
         <span class="meetings-info-txt-row">Breakfast to lunch, coffee to cakes.<br> </span>
         <span>Fill in the form below and we will get straight back to you.</span>
       </div>
-      <form name="meetingRoom" class="meetingRoom" id="meetingRoom">
+      <form onsubmit="return sendMail(this)" name="meetingRoom" class="meetingRoom" id="meetingRoom">
         <div class="row">
           <div class="form-left col-md-6">
             <input type="email" class="form-control" id="Email" placeholder="name@example.com">
@@ -78,7 +86,7 @@
         </div>    
         <div class="row">
           <div class="form-left col-md-6">
-            <select id="inputLocation" name="inputLocation" onchange="populate(this.id,'inputRoom')" class="form-control">
+            <select id="inputLocation" name="inputLocation" onchange="populate(this.id,'inputRoom', 'numberPeople')" class="form-control">
               <option value="Choose a location...">Choose a location...</option>
               <option value="Fleet Street">Fleet Street</option>
               <option value="Record Hall">Record Hall</option>
@@ -93,7 +101,7 @@
         <div class="row">
           <div class="form-left col-md-6">
             <select id="numberPeople" class="form-control">
-              <option value="Choose number of people..." selected>Choose number of people...</option>
+              <option value="Choose number of people..." selected>Choose a room first...</option>
             </select>
           </div>
           <div class="form-right col-md-6">
@@ -101,6 +109,9 @@
               <option value="Choose time..." selected>Choose time...</option>
             </select>
           </div>
+        </div>
+        <div class="form-group">
+          <input class="form-control date-input" type="date" id="date"></input>
         </div>
         <div class="form-group">
           <textarea class="form-control form-txt-box" id="FormTextarea" rows="3" placeholder="Dietary Requirements etc."></textarea>
