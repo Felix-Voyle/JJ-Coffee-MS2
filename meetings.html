@@ -16,7 +16,6 @@
     <script type="text/javascript">
       (function(){
         emailjs.init("user_VFr6nuE298lx3NUYI6O1K");
-        emailjs.send("service_dx782ov", "Meeting Room", {name: "james", notes: "i want to book a room"});
       })();
       </script>
 </head>
@@ -76,7 +75,7 @@
         <span class="meetings-info-txt-row">Breakfast to lunch, coffee to cakes.<br> </span>
         <span>Fill in the form below and we will get straight back to you.</span>
       </div>
-      <form name="meetingRoom" class="meetingRoom" id="meetingRoom">
+      <form onsubmit="return sendMail(this)" name="meetingRoom" class="meetingRoom" id="meetingRoom">
         <div class="row">
           <div class="form-left col-md-6">
             <input type="email" class="form-control" id="Email" placeholder="name@example.com">

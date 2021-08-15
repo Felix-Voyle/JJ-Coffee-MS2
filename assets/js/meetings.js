@@ -97,3 +97,26 @@ function validateForm() {
    return false; 
  }
 }
+
+
+function sendMail(meetingRoom) {
+  emailjs.send('service_dx782ov', 'Meetings', {
+    "from_name": meetingRoom.Name.value,
+    "email": meetingRoom.Email.value,
+    "location": meetingRoom.inputLocation.value,
+    "room": meetingRoom.inputRoom.value,
+    "number": meetingRoom.numberPeople.value,
+    "time": meetingRoom.inputTime.value,
+    "date": meetingRoom.date.value,
+    "message": meetingRoom.FormTextarea.value
+  })
+  .then(
+      function(response) {
+          console.log("SUCCESS", response);
+      },
+      function(error) {
+          console.log("FAILED", error);
+      }
+  );
+  return false; 
+}

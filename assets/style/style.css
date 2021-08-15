@@ -346,22 +346,22 @@ a:link { text-decoration: none; }
 }
 
 .menu-hero {
-  background-image: url(../assets/images/food.jpg);
+  background-image: url(../images/food.jpg);
     background-position: 50% 40%;
 }
 
 .meetings-hero {
-  background: url(../assets/images/meetings.jpg);
+  background: url(../images/meetings.jpg);
     background-position: 40% 50%;
 }
 
 .coffee-hero {
-  background: url(../assets/images/coffee.jpg);
+  background: url(../images/coffee.jpg);
     background-position: 40% 50%;
 }
 
 .find-us-hero {
-  background: url(../assets/images/st-pauls.jpg);
+  background: url(../images/st-pauls.jpg);
     background-position: 40% 45%;
 }
 
