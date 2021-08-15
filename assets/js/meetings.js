@@ -5,50 +5,50 @@ locations = {
   }
 
 //populates dropdown select boxes meeting room form
-function populate (s1, s2) {
-  var s1 = document.getElementById(s1)
-  var s2 = document.getElementById(s2)
-  var rooms = s1.value
+function populate (location, roomSelect) {
+  var location = document.getElementById(location)
+  var roomSelect = document.getElementById(roomSelect)
+  var rooms = location.value
   switch (rooms) {
   case "Fleet Street" :
-  populateRoom(locations["Fleet Street"], s2)
+  populateRoom(locations["Fleet Street"], roomSelect)
   break;
   case "Record Hall" :
-  populateRoom(locations["Record Hall"], s2)
+  populateRoom(locations["Record Hall"], roomSelect)
   break;
   case "Choose a location..." :
-  populateRoom(locations["Choose a location..."], s2)
+  populateRoom(locations["Choose a location..."], roomSelect)
   break;
   }
-  function populateRoom(rooms, s2) {
+  function populateRoom(rooms, roomSelect) {
   $('#inputRoom option').remove();
        for (var room in rooms) {
           var newOption = document.createElement("option");
           newOption.value = room;
           newOption.innerHTML = room;
-          s2.options.add(newOption);
+          roomSelect.options.add(newOption);
           }
       }
   }
 
 // populates choose number of people
-function populateNumbers(s1, s2, s3) {
+function populateNumbers(room, numberPeople, location) {
   $('#numberPeople option').remove();
-  var s1 = document.getElementById(s1)
-  var s2 = document.getElementById(s2)
-  var location = document.getElementById(s3).value
-  var room = s1.value
+  var roomSelect = document.getElementById(room)
+  var numberPeople = document.getElementById(numberPeople)
+  var location = document.getElementById(location).value
+  var room = roomSelect.value
   var maxNumber = (locations[location][room])
   var placementText = document.createElement("option");
   if (room != "choose a room..." || "Choose a location...") {
      placementText.value = ""
        placementText.innerHTML = "Choose number of people..."
-       s2.options.add(placementText);
+       numberPeople.options.add(placementText);
   for (i=1; i<=maxNumber; i++) {
       var newOption = document.createElement("option");
           newOption.value = i;
           newOption.innerHTML = i;
-          s2.options.add(newOption);
+          numberPeople.options.add(newOption);
       }
     }
   }
