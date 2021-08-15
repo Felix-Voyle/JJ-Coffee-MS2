@@ -463,7 +463,7 @@ a:link { text-decoration: none; }
   margin-left: auto;
   margin-right: 20%;
   position: relative;
-  top: 17rem;
+  top: 18rem;
   left: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -490,7 +490,7 @@ a:link { text-decoration: none; }
 
 @media screen and (min-width: 375px) {
   .form-control {
-    margin-bottom: 0.8em;
+    margin-bottom: 0.5em;
    }
 }
 
@@ -513,6 +513,11 @@ a:link { text-decoration: none; }
   } 
   .meetings-text {
     display: block;
+  }
+  .date-input {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
