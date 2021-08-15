@@ -5,9 +5,10 @@ locations = {
   }
 
 //populates dropdown select boxes meeting room form
-function populate (location, roomSelect) {
+function populate (location, roomSelect, numberPeople) {
   var location = document.getElementById(location)
   var roomSelect = document.getElementById(roomSelect)
+  var numberPeople = document.getElementById(numberPeople)
   var rooms = location.value
   switch (rooms) {
   case "Fleet Street" :
@@ -18,6 +19,11 @@ function populate (location, roomSelect) {
   break;
   case "Choose a location..." :
   populateRoom(locations["Choose a location..."], roomSelect)
+  $('#numberPeople option').remove();
+  var placementOption = document.createElement("option");
+  placementOption.value = "";
+  placementOption.innerHTML = "Choose a room first...";
+  numberPeople.options.add(newOption);
   break;
   }
   function populateRoom(rooms, roomSelect) {
@@ -40,7 +46,7 @@ function populateNumbers(room, numberPeople, location) {
   var room = roomSelect.value
   var maxNumber = (locations[location][room])
   var placementText = document.createElement("option");
-  if (room != "choose a room..." || "Choose a location...") {
+  if (room != "choose a room...") {
      placementText.value = ""
        placementText.innerHTML = "Choose number of people..."
        numberPeople.options.add(placementText);
