@@ -113,6 +113,8 @@ function sendMail(meetingRoom) {
   .then(
       function(response) {
           console.log("SUCCESS", response);
+          $('#meetingRoom').style.display = "none"
+          $('#successMsg').style.display = "block"
       },
       function(error) {
           console.log("FAILED", error);
