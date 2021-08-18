@@ -88,7 +88,7 @@ function incItem(key, inc) {
   } else if (value < item.min) {
       itemElem.remove();
       item.qty = 0
-      localStorage.setItem(item.id, JSON.stringify(item));
+      localStorage.removeItem(item.id)
       itemTotal();
     }
   }
