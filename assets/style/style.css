@@ -647,6 +647,10 @@ color: #FDBE11;
 }
 
 @media screen and (min-width: 992px) {
+  .addBtn {
+    position: relative;
+    right: 35px;
+  }
   .salads, .flatbreads, .coffee-left, .coffee-right, .other-hot-drinks, .cold-drinks {
     width: 50%;
   }
@@ -670,6 +674,16 @@ color: #FDBE11;
   }
   .salad-item {
     margin-top: 88px;
+  }
+  .menu-breakfast::after, .menu-lunch::after, .menu-coffee::after, .menu-drinks::after {
+    content:"";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-left: 2px dotted #141414;
+    transform: translate(-50%);
   } 
 }
 
