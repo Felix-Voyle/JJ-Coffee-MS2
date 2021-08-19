@@ -694,14 +694,13 @@ color: #FDBE11;
 
 /*-------find us------*/
 
-#map {
+.google-map {
   height: 100%;
   width: 90%;
+  min-height: 380px;
   margin-left: auto;
   margin-right: auto;   
 }
-
-div#map {min-height: 360px;}
 
 .get-in-touch-box {
 background-color: #6D5F61;
