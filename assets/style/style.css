@@ -251,7 +251,6 @@ a:link { text-decoration: none; }
   /*-----dropdwn nav ------*/
 
 .dropdwn-mnu {
-  display: flex;
   width: 100vw;
   height: 86vh;
   position: absolute;
@@ -699,8 +698,7 @@ color: #FDBE11;
   height: 100%;
   width: 90%;
   margin-left: auto;
-  margin-right: auto;
-  background-color: #141414;   
+  margin-right: auto;   
 }
 
 div#map {min-height: 360px;}
