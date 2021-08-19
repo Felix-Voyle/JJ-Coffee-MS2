@@ -28,6 +28,10 @@ function initMap() {
         const placeIdElement = document.createElement("p");
         placeIdElement.textContent = "Rating:" + place.rating;
         content.appendChild(placeIdElement);
+        const getDirectionsElement = document.createElement("a");
+        getDirectionsElement.textContent = "Get Directions";
+        getDirectionsElement.href = "https://goo.gl/maps/h3fRGPtas41Jcgg78"
+        content.appendChild(getDirectionsElement);
         const placeAddressElement = document.createElement("p");
         placeAddressElement.textContent = place.formatted_address;
         content.appendChild(placeAddressElement);
