@@ -620,6 +620,11 @@ margin-bottom: 10px;
   border: 10px solid white;
   overflow: auto;
   font-weight: 300;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+   rgba(0, 0, 0, 0.12) 0px -12px 30px,
+   rgba(0, 0, 0, 0.12) 0px 4px 6px,
+   rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+   rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .primary-menu-btn, .secondary-menu-btn {
@@ -699,24 +704,38 @@ color: #FDBE11;
   width: 90%;
   min-height: 380px;
   margin-left: auto;
-  margin-right: auto;   
+  margin-right: auto;
+  box-shadow: rgba(93, 102, 94, 0.48) 6px 2px 16px 0px, rgba(48, 47, 47, 0.8) -6px -2px 16px 0px;   
+}
+
+.find-us-map {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .get-in-touch-box {
-background-color: #6D5F61;
+background-color: #272727;
 width: 90%;
 margin-left: auto;
 margin-right: auto;
 padding: 5px;
 margin-top: 20px;
 margin-bottom: 10px;
+height: 148px;
+box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 
-.findus-icon i {
+.findus-icon-social i {
 color: #FDBE11;
 font-size: 24px;
 margin: 4px;
 }
+
+.findus-icon i {
+  color: #deecd5;
+  font-size: 24px;
+  margin: 4px;
+  }
 
 .contact-info {
 font-size: 16px;
@@ -725,24 +744,52 @@ font-weight: 200;
 }
 
 .get-in-touch-left {
-margin-bottom: 10px;
+margin-bottom: auto;
+margin-top: auto;
 }
 
 .get-in-touch-right {
-background-color: #ADADAD;
+background-color: #797c78;
 margin-left: auto;
 margin-right: auto;
 width: 80%;
+margin-top: 5px;
 }
 
 @media screen and (min-width: 576px) {
   .get-in-touch-right {
     width: 63%;
   }
+  .google-map {
+    min-height: 450px;  
+  }
+  .find-us-map {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (min-width: 992px) {
   .get-in-touch-left, .get-in-touch-right {
     width: 50%;
+  }  
+  .get-in-touch-right {
+    margin-top: 0;
+  }  
+  .get-in-touch-box {
+    height: 100px;
+  }
+  .social-icons-top, .social-icons-bottom {
+    position: relative;
+    font-size: 24px;
+  }
+  .social-icons-top {
+    top: 10%
+  }
+  .social-icons-bottom {
+    top: 12%
+  }
+  .google-map {
+    min-height: 500px;  
   }
 }
