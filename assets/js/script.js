@@ -1,3 +1,5 @@
+/* exported global_var */
+
 //burger icon animation and dropdown menu
 function burgerDropMenu() {
   var burger = document.getElementById('burger-menu');

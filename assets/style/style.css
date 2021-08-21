@@ -223,14 +223,14 @@ a:link { text-decoration: none; }
   }
 
   .cart-total-row {
-    position: absolute;
-    bottom: 40px;
-    left: 38px;
+    position: relative;
+    bottom: 10px;
+    left: 0;
   }
 
-  .collectTime {
-    height: 33px;
-    margin-right: 25px;
+  .total-txt {
+    font-weight: bold;
+    letter-spacing: 1.4px;
   }
 
   .collectRow {
@@ -239,15 +239,15 @@ a:link { text-decoration: none; }
     height: 36px;
   }
 
+  .collectTime {
+    height: 33px;
+    margin-right: 25px;
+  }
+
   .ammountTotal {
     margin-left: 15px;
     font-weight: 400;
     font-style: italic;
-  }
-  
-  .total-txt {
-    font-weight: bold;
-    letter-spacing: 1.4px;
   }
 
   @media screen and (min-width: 992px) {
@@ -400,7 +400,7 @@ a:link { text-decoration: none; }
     transition: 1s;
 }
 
-.caption-text, #nav-home, #nav-drinks, #nav-food, #nav-meetings, #nav-findus {
+.caption-text {
   font-family: 'Londrina Outline', cursive;
   color: white;
   font-size: 3rem;

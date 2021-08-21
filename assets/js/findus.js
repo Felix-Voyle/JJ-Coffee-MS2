@@ -1,3 +1,4 @@
+//google maps API and places request
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     center: {lat: 51.517783, lng: -0.107769},

@@ -1,3 +1,4 @@
+//object and properties that are used in addItem
 var items = {
   "longblack": {id: "longblack", name: "Long Black", 
   price: 2.7, min: 1, max: 20, qty: 0 },
