@@ -204,7 +204,7 @@ function itemTotal() {
     }, 0); 
     var priceRounded = totalPrice.toFixed(2);
     if (priceRounded > 0) {
-      cartPriceTotal.innerHTML = "£" + priceRounded;
+      cartPriceTotal.innerHTML = "total:  £" + priceRounded;
   } else {
     cartPriceTotal.innerHTML = "";
   }
@@ -248,6 +248,7 @@ function itemTotal() {
                 this.addButton(itemElem, 'button', 'button btnCartDel', "Delete", () => deleteItem(key));
                 cart.appendChild(itemElem);
                 itemTotal();
+                priceTotal();
           }
         }
       }
