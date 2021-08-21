@@ -14,9 +14,7 @@ html,body
 
 a:link { text-decoration: none; }
 
-.row {
-     --bs-gutter-x: 0; 
-}
+.row {--bs-gutter-x: 0; }
 
 /*---header---*/
 .header {
@@ -304,6 +302,9 @@ a:link { text-decoration: none; }
   }
   .nav-home, .nav-drinks, .nav-food, .nav-meetings, .nav-findus {
     top: 50%;
+    font-size: 1.8rem;
+  }
+  .nav-home:hover, .nav-drinks:hover, .nav-food:hover, .nav-meetings:hover, .nav-findus:hover {
     font-size: 1.9rem;
   }
   .nav-home {
@@ -368,7 +369,7 @@ a:link { text-decoration: none; }
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: fixed;
+    background-size: cover;
     position: relative;
 }
 

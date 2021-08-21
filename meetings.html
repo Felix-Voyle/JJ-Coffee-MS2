@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link href="assets/style/style.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
     </script>
-    <script type="text/javascript">
+    <script>
       (function(){
         emailjs.init("user_VFr6nuE298lx3NUYI6O1K");
       })();
@@ -23,7 +22,7 @@
   <header class="header">
     <div class="row">
       <div class="burger-container col-2 col-md-1">
-      <button id="burger-menu" class="burger-btn" onclick="burgerDropMenu()"; aria-label="Main Menu">
+      <button id="burger-menu" class="burger-btn" onclick="burgerDropMenu()" aria-label="Main Menu">
         <svg width="100" height="100" viewBox="0 0 100 100">
           <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
           <path class="line line2" d="M 20,50 H 80" />
@@ -51,8 +50,8 @@
     <a href="index.html"><span class="nav-home">Home</span></a> 
     <a href="coffee.html"><span class="nav-drinks">Coffee</span></a>
     <a href="food.html"><span class="nav-food">Food</span></a>
-    <a href="meetings.html"><span class="nav-meetings" class="text-center">Meetings</span></a>
-    <a href="findus.html"><span class="nav-findus" class="text-center">Find Us</span></a> 
+    <a href="meetings.html"><span class="nav-meetings text-center">Meetings</span></a>
+    <a href="findus.html"><span class="nav-findus text-center">Find Us</span></a> 
   </div>
 
   <div id="basket-info-container" class="basket-info-container">
@@ -92,7 +91,7 @@
             </select>
           </div>
           <div class="form-right col-md-6">
-          <select id="inputRoom" id="inputRoom" onchange="populateNumbers(this.id,'numberPeople', 'inputLocation')" class="form-control">
+          <select id="inputRoom" onchange="populateNumbers(this.id,'numberPeople', 'inputLocation')" class="form-control">
             <option value="Choose a location first...">Choose a location first...</option>
           </select>
           </div>
@@ -110,13 +109,13 @@
           </div>
         </div>
         <div class="form-group">
-          <input class="form-control date-input" type="date" id="date"></input>
+          <input class="form-control date-input" type="date" id="date">
         </div>
         <div class="form-group">
           <textarea class="form-control form-txt-box" id="FormTextarea" rows="3" placeholder="Dietary Requirements etc."></textarea>
         </div>
         <div class="text-center">
-          <button class="submit-btn-meetings type="submit">Submit</button>
+          <button class="submit-btn-meetings" type="submit">Submit</button>
         </div>
       </form>
       <div class="success-msg text-center" id="successMsg">
@@ -127,9 +126,9 @@
       </div>
     </div>
   </div>
-<script src='assets/js/script.js' type="text/javascript"></script>
-<script src='assets/js/meetings.js' type="text/javascript"></script>
-<script src='assets/js/cart.js' type="text/javascript"></script>
+<script src='assets/js/script.js'></script>
+<script src='assets/js/meetings.js'></script>
+<script src='assets/js/cart.js'></script>
 
 </body>
 </html>  
