@@ -31,11 +31,11 @@ function alternateMenu() {
   $('.secondary-menu-btn').click(function(){
       $('.secondary-menu').show();
       $('.primary-menu').hide();
-  })
+  });
   $('.primary-menu-btn').click(function(){
       $('.primary-menu').show();
       $('.secondary-menu').hide();
-  })
+  });
 
 }
 
