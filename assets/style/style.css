@@ -429,6 +429,7 @@ a:link { text-decoration: none; }
   margin-right: auto;
   position: relative;
   top: 50%;
+  max-height: 900px;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   overflow: scroll;
@@ -463,15 +464,26 @@ a:link { text-decoration: none; }
   margin-left: auto;
   margin-right: 20%;
   position: relative;
-  top: 23rem;
   left: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   -webkit-transform: translate(-50%, -50%);
 }
 
+.meetingRoom {
+  top: 23rem;
+}
+
 .success-msg {
-  display: none;
+  background-color: #ecebeb;
+  border: 3px solid #272727 ;
+  padding: 10px;
+  top: 18rem;
+}
+.successMsgIcon {
+  font-size: 20px;
+  color: #FDBE11;
+  margin-right: 15px;
 }
 
 .submit-btn-meetings {
@@ -487,7 +499,7 @@ a:link { text-decoration: none; }
 .meetings-info-txt {
   position: absolute;
   width: 90%;
-  top: 50px;
+  top: 40px;
   left: 50%;
   transform: translate(-50%, 10%);
   font-weight: 300;
@@ -498,6 +510,9 @@ a:link { text-decoration: none; }
 @media screen and (min-width: 375px) {
   .form-control {
     margin-bottom: 0.5em;
+   }
+   .meetings-info-txt {
+     top: 45px;
    }
 }
 
@@ -526,8 +541,15 @@ a:link { text-decoration: none; }
     margin-left: auto;
     margin-right: auto;
   }
-  .meetingRoom, .success-msg {
+  .meetingRoom {
     top: 25rem;
+  }
+  .meetings-info-txt {
+    top: 60px;
+    font-size: 18px;
+  }
+  .meeting-heading {
+    font-size: 34px;
   }
 }
 
@@ -536,8 +558,8 @@ a:link { text-decoration: none; }
     top: 27rem;
   }
   .meetings-info-txt {
-    top: 2rem;
-    font-size: 18px;
+    top: 3rem;
+    font-size: 20px;
   }
   .meetings-info-txt-row {
     margin-bottom: 10px;
