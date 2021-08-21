@@ -14,9 +14,7 @@ html,body
 
 a:link { text-decoration: none; }
 
-.row {
-     --bs-gutter-x: 0; 
-}
+.row {--bs-gutter-x: 0; }
 
 /*---header---*/
 .header {
@@ -371,7 +369,7 @@ a:link { text-decoration: none; }
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: fixed;
+    background-size: cover;
     position: relative;
 }
 
