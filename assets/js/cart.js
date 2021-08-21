@@ -40,7 +40,7 @@ const items = {
   "halloumi": {id: "halloumi", name: "Halloumi", price: 1.5,  min: 1, max: 10, qty: 0 },
   "egg": {id: "egg", name: "Egg", price: 1, min: 1, max: 10, qty: 0 },
   "salmon": {id: "salmon", name: "Salmon", price: 2,  min: 1, max: 10, qty: 0 }
-}
+};
 
 //function to add items to cart
 function addItem(key) {
@@ -53,25 +53,25 @@ function addItem(key) {
           itemElem.className = ('itemCartRow');
           itemElem.id = key;
           
-          var Name = this.addElement(itemElem, 'span', 'itemNameCart', item.name);
-          var Price = this.addElement(itemElem, 'span', 'itemPriceCart', '£' + item.price);
-          var ButtonDec = this.addButton(itemElem, 'button', 'button btnCart qtySectionDec' , "-", () => incItem(key, -1));
-          var Qty = this.addElement(itemElem, 'span', 'qty qtySectionNum text-center', "1");
-          var ButtonInc = this.addButton(itemElem, 'button', 'button btnCart qtySectionInc', "+", () => incItem(key, 1));
-          var ButtonDelete = this.addButton(itemElem, 'button', 'button btnCartDel', "Delete", () => deleteItem(key));
+          this.addElement(itemElem, 'span', 'itemNameCart', item.name);
+          this.addElement(itemElem, 'span', 'itemPriceCart', '£' + item.price);
+          this.addButton(itemElem, 'button', 'button btnCart qtySectionDec' , "-", () => incItem(key, -1));
+          this.addElement(itemElem, 'span', 'qty qtySectionNum text-center', "1");
+          this.addButton(itemElem, 'button', 'button btnCart qtySectionInc', "+", () => incItem(key, 1));
+          this.addButton(itemElem, 'button', 'button btnCartDel', "Delete", () => deleteItem(key));
           cart.appendChild(itemElem);
-          item.qty ++
+          item.qty ++;
           localStorage.setItem(item.id, JSON.stringify(item));
           itemTotal();
       } else if (item.qty < item.max) {
           var elemQty = itemElem.getElementsByClassName("qty")[0];
           elemQty.innerHTML = Number(elemQty.innerHTML) + 1;
-          item.qty ++
+          item.qty ++;
           localStorage.setItem(item.id, JSON.stringify(item));
           itemTotal();
       }
   }
-  return itemElem
+  return itemElem;
 }
 
 //increases and decreases items quantity in basket
@@ -82,13 +82,13 @@ function incItem(key, inc) {
   const value = Number(elemQty.innerHTML) + inc;
   if (value >= item.min && value <= item.max) {
       elemQty.innerHTML = value;
-      item.qty = value
+      item.qty = value;
       localStorage.setItem(item.id, JSON.stringify(item));
       itemTotal();
   } else if (value < item.min) {
       itemElem.remove();
-      item.qty = 0
-      localStorage.removeItem(item.id)
+      item.qty = 0;
+      localStorage.removeItem(item.id);
       itemTotal();
     }
   }
@@ -117,8 +117,8 @@ function deleteItem(key) {
   var itemElem = document.getElementById(key);
   var item = items[key];
   itemElem.remove();
-  item.qty = 0
-  localStorage.removeItem(item.id)
+  item.qty = 0;
+  localStorage.removeItem(item.id);
   itemTotal();
 }
 
@@ -126,7 +126,6 @@ function deleteItem(key) {
 function itemTotal() {
   var counter = document.getElementById('itemCounter');
   var emptyCartMsg = document.getElementById('emptyCartMsg');
-  var cart = document.getElementById('cart');
   var cartPriceTotal = document.getElementById('totalAmmount');
     var totalItems = [];
     var totalPrice = [];
@@ -136,23 +135,23 @@ function itemTotal() {
     totalItems.push(itemQty);
     totalPrice.push(price);
     }
-    var totalItems = totalItems.reduce(function(a, b){
+        totalItems = totalItems.reduce(function(a, b){
           return a + b;
       }, 0);
-      var totalPrice = totalPrice.reduce(function(a, b){
+        totalPrice = totalPrice.reduce(function(a, b){
         return a + b;
     }, 0); 
-      var priceRounded = totalPrice.toFixed(2) 
+      var priceRounded = totalPrice.toFixed(2); 
      if (totalItems >= 1) {
-      counter.innerHTML = totalItems
-      counter.style.display = "block"
-      cartPriceTotal.innerHTML = "£" + priceRounded
-      emptyCartMsg.style.display = "none"
+      counter.innerHTML = totalItems;
+      counter.style.display = "block";
+      cartPriceTotal.innerHTML = "£" + priceRounded;
+      emptyCartMsg.style.display = "none";
      } else if (totalItems < 1) {
-     counter.innerHTML = ""
-     counter.style.display = "none"
-     cartPriceTotal.innerHTML = ""
-     emptyCartMsg.style.display = "block" 
+     counter.innerHTML = "";
+     counter.style.display = "none";
+     cartPriceTotal.innerHTML = "";
+     emptyCartMsg.style.display = "block"; 
      }
   } 
 
@@ -162,28 +161,28 @@ function loadCart(key) {
 for (let products in localStorage) {
     if (localStorage.hasOwnProperty(products)) {
         const cartItems = JSON.parse(localStorage.getItem(products));
-        cartArray.push(cartItems)
+        cartArray.push(cartItems);
     }
 }
-for (i=0; i<cartArray.length; i++) {
-const cartKey = cartArray[i].id
-const qty = cartArray[i].qty
+for (let i=0; i<cartArray.length; i++) {
+const cartKey = cartArray[i].id;
+const qty = cartArray[i].qty;
   for (let key in items) {
   if (cartKey == key) {
-var item = items[key]
-item.qty = qty
+var item = items[key];
+item.qty = qty;
 var cart = document.getElementById("cart");
 var itemElem = document.getElementById(key);
 itemElem = document.createElement('div');
           itemElem.className = ('itemCartRow');
           itemElem.id = key;
           
-          var Name = this.addElement(itemElem, 'span', 'itemNameCart', item.name);
-          var Price = this.addElement(itemElem, 'span', 'itemPriceCart', '£' + item.price);
-          var ButtonDec = this.addButton(itemElem, 'button', 'button btnCart qtySectionDec' , "-", () => incItem(key, -1));
-          var Qty = this.addElement(itemElem, 'span', 'qty qtySectionNum text-center', item.qty);
-          var ButtonInc = this.addButton(itemElem, 'button', 'button btnCart qtySectionInc', "+", () => incItem(key, 1));
-          var ButtonDelete = this.addButton(itemElem, 'button', 'button btnCartDel', "Delete", () => deleteItem(key));
+          this.addElement(itemElem, 'span', 'itemNameCart', item.name);
+          this.addElement(itemElem, 'span', 'itemPriceCart', '£' + item.price);
+          this.addButton(itemElem, 'button', 'button btnCart qtySectionDec' , "-", () => incItem(key, -1));
+          this.addElement(itemElem, 'span', 'qty qtySectionNum text-center', item.qty);
+          this.addButton(itemElem, 'button', 'button btnCart qtySectionInc', "+", () => incItem(key, 1));
+          this.addButton(itemElem, 'button', 'button btnCartDel', "Delete", () => deleteItem(key));
           cart.appendChild(itemElem);
           itemTotal();
     }
