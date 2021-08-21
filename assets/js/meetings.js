@@ -79,10 +79,10 @@ for(var i = 0; i < options.length; i++) {
 
 // Validates form
 function validateForm() {
-  let location = document.getElementById('inputLocation').value;
-  let room = document.getElementById('inputRoom').value;
-  let people = document.getElementById('numberPeople').value;
-  let time = document.getElementById('inputPeople').value;
+  var location = document.getElementById('inputLocation').value;
+  var room = document.getElementById('inputRoom').value;
+  var people = document.getElementById('numberPeople').value;
+  var time = document.getElementById('inputPeople').value;
   if (location == "Choose a location...") {
     alert("Choose a location");
     return false;
