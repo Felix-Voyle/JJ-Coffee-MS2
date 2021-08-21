@@ -79,10 +79,10 @@
       <form onsubmit="return sendMail(this)" name="meetingRoom" class="meetingRoom" id="meetingRoom">
         <div class="row">
           <div class="form-left col-md-6">
-            <input type="email" class="form-control" id="Email" placeholder="name@example.com">
+            <input type="email" class="form-control" id="Email" placeholder="name@example.com" required>
           </div>
           <div class="form-right col-md-6">
-            <input type="text" class="form-control" id="Name" placeholder="John Smith">
+            <input type="text" class="form-control" id="Name" placeholder="John Smith" required>
           </div>
         </div>    
         <div class="row">
@@ -112,7 +112,7 @@
           </div>
         </div>
         <div class="form-group">
-          <input class="form-control date-input" type="date" id="date">
+          <input class="form-control date-input" type="date" id="date" required>
         </div>
         <div class="form-group">
           <textarea class="form-control form-txt-box" id="FormTextarea" rows="3" placeholder="Dietary Requirements etc."></textarea>

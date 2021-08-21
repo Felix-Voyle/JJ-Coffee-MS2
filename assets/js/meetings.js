@@ -1,6 +1,6 @@
 var locations = {
-  "Fleet Street" : {"Choose a Room...":0,"Boot":10,"Iron":16,"Tophat":16,"Racecar":8,"Battleship":16,"Thimble":6,"Tophat and Iron":32,"Wheelbarrow":10,"Cannon":6},
-  "Record Hall" : {"Choose a Room...":0,"Doc":12, "Data":12, "File":8, "Form":8},
+  "Fleet Street" : {"Choose a room...":0,"Boot":10,"Iron":16,"Tophat":16,"Racecar":8,"Battleship":16,"Thimble":6,"Tophat and Iron":32,"Wheelbarrow":10,"Cannon":6},
+  "Record Hall" : {"Choose a room...":0,"Doc":12, "Data":12, "File":8, "Form":8},
   "Choose a location..." : {"Choose a location first...":0}
   };
 
@@ -77,12 +77,14 @@ for(var i = 0; i < options.length; i++) {
     }
 }
 
-// Validates form
-function validateForm() {
+
+// validates form and then sends meeting room request via emailJS
+function sendMail(meetingRoom) {
   var location = document.getElementById('inputLocation').value;
   var room = document.getElementById('inputRoom').value;
   var people = document.getElementById('numberPeople').value;
-  var time = document.getElementById('inputPeople').value;
+  var time = document.getElementById('inputTime').value;
+  var date = document.getElementById('date').value;
   if (location == "Choose a location...") {
     alert("Choose a location");
     return false;
@@ -92,14 +94,10 @@ function validateForm() {
   } else if (people == "Choose number of people...") {
     alert("Choose number of people");
    return false; 
- } else if (time == "Choose a time...") {
+ } else if (time == "Choose time...") {
     alert("Choose a time");
    return false; 
- }
-}
-
-
-function sendMail(meetingRoom) {
+ } else {
   emailjs.send('service_dx782ov', 'Meetings', {
     "from_name": meetingRoom.Name.value,
     "email": meetingRoom.Email.value,
@@ -121,7 +119,8 @@ function sendMail(meetingRoom) {
       }
   );
   return false; 
-}
+  }
+ }
 
 $(document).ready(function(){ 
   $('#successMsg').hide();
