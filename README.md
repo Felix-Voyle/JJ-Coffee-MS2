@@ -72,8 +72,14 @@ I have made a click and collect feature for the website although I don't know ho
 ### Testing User Stories from User Experience (UX) Section
 
 #### First Time Visitor Goals
-- As a first time visitor I can clearly see different sections of the site and upon navigating to the food/drinks menus can see all products that the company sells. 
-- As a first time visitor I can tell the purpose of the site is to represent the business and highlight the services they offer.
+- As a first time visitor I want to be able to see what services food/drinks are on offer
+
+  i. As a first time visitor I can clearly see different sections of the site and upon navigating to the food/drinks menus can see all products that the company sells. 
+
+- As a first time visitor I want to know the purpose of the site
+
+   i. As a first time visitor I can tell the purpose of the site is to represent the business and highlight the services they offer.
+
  - As a first time user I can navigate around the site with ease. Using either the hamburger/dropdown menu or the hero images on the main page which highlight all the main sections the site contains.
 
 #### Returning vistitor Goals
@@ -97,7 +103,9 @@ I have made a click and collect feature for the website although I don't know ho
 
 ### Code 
 
-Animated hamburger menu - 
+- Animated hamburger menu -  https://codepen.io/nevcanuludas/pen/WbNbow
+
+- box-shadow effects - https://getcssscan.com/css-box-shadow-examples 
 
 
 ### Content

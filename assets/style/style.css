@@ -224,8 +224,19 @@ a:link { text-decoration: none; }
 
   .cart-total-row {
     position: absolute;
-    bottom: 10px;
+    bottom: 40px;
     left: 38px;
+  }
+
+  .collectTime {
+    height: 33px;
+    margin-right: 25px;
+  }
+
+  .collectRow {
+    position: absolute;
+    bottom: 0px;
+    height: 36px;
   }
 
   .ammountTotal {
