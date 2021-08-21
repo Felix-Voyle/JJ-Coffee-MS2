@@ -1,8 +1,9 @@
 # Java Java Coffee
 
 Java Java coffee is a coffee company run inside co-working spaces. They not only have their doors open to the genral public, but also cater for in house meeting rooms. 
-The purpose of this site would not only be to highlight their offerings, but also to enable people to submit meeting room catering requests over the website. 
-This would streamline the service that the company offers for the meeting rooms. 
+The main purpose of this site would not only be to highlight their offerings, but also to enable people to submit meeting room catering requests over the website via email JS. 
+This would streamline the service that the company offers for the meeting rooms.
+I have also added in further javascript by making all items on the site able to add to cart which is a feature which although i dont have the skills to fully complete yet, with payment options etc. Is something I would be able to finish off in the near future.  
 
 
 ## User stories
@@ -10,8 +11,7 @@ This would streamline the service that the company offers for the meeting rooms.
 
 ### First Time Visitor Goals
 - As a first time visitor I want to be able to see what services food/drinks are on offer
-- As a first time visitor I want to know the purpose of the site
-- As a first time visitor I want to be able to see past reviews/experiecnes of the company 
+- As a first time visitor I want to know the purpose of the site 
 - As a first time user I want to be able to navigate around the site seamlessly 
  
  ### Returning Visitor Goals
@@ -20,20 +20,22 @@ This would streamline the service that the company offers for the meeting rooms.
 - As a returning visitor I want to see up to date reviews and experiences   
 
 ### Frequent Visitor Goals
-- As a frequent user I want to be able to see up to date food / coffee offerings or any current specials
+- As a frequent user I want to be able to go online and order my food and drinks for collection at a specific time.
 - As a frequent user I want to be able to get in touch with the company about a meeting room
 
 ## Design 
 ---
 
 * Colour Scheme
-  The colour scheme will be mainly shades of white black and grey in terms of main colours used for the basic site and sections. This will help pictures of colourful food and coffee stand out.
+  The colour scheme across the site is a main background color of #deecd5 which is a light pale green shade. #272727 which is a shade of black contrasts this nicely at the top of the page and I think the colours compliment eachother. I used #FDBE11 which is a goldy yellow for the brand name and some other small elements which contrasts the black colour and stands out well against it. #ADADAD and white were used across the menu items to make them stand out in the middle of the page. 
 
 * Typography
+I used three different fonts across the website. Zen Tokyo Zoo is used for the brand name at the top of the site and a couple of headings. Londrina outline is used on all the hero cards on the main page which i feel is a nice clear font that compliments these sections. The rest of the site and text is using Ubuntu which is a very clean font which is easy to read. 
+
 
 * Imagery
-  The homepage will consist of 4 main images that stand out and clearly highlight the main purposes of the site. 
-  Some smaller images will be used on other pages to highlight offerings of food and coffee and show examples of products.  
+  The homepage consists of 4 main images that stand out and clearly highlight the main purposes/areas of the site. 
+  These images change to video at larger screen size and really stand out and make the site feel alive. 
 
 ## Wireframes 
 ---
@@ -49,7 +51,7 @@ Large Screens - [View](assets/wireframes/lrg-screen-coffee.pdf)
 ## Features 
 ---
 ### Features to implement in the future
-
+I have made a click and collect feature for the website although I don't know how to implement a payment feature or any backend code to receive orders that would be viable or efficient in terms of accepting them. I would like to be able to implement this properly when I have the relevant skills. 
 ## Technologies used
 
 ----
@@ -70,10 +72,18 @@ Large Screens - [View](assets/wireframes/lrg-screen-coffee.pdf)
 ### Testing User Stories from User Experience (UX) Section
 
 #### First Time Visitor Goals
+- As a first time visitor I can clearly see different sections of the site and upon navigating to the food/drinks menus can see all products that the company sells. 
+- As a first time visitor I can tell the purpose of the site is to represent the business and highlight the services they offer.
+ - As a first time user I can navigate around the site with ease. Using either the hamburger/dropdown menu or the hero images on the main page which highlight all the main sections the site contains.
 
 #### Returning vistitor Goals
+- As a returning visitor I can easily navigate to the find us page where contact information is clear and readily available. 
+- As a returning visitor I want to book catering for a meeting room. This is easily found and done with a confirmation email and a success message being show to the visitor to confirm a successful request. 
+- As a returning visitor I want to see up to date reviews and experiences. 
 
 #### Frequent Vistor Goals
+- As a frequent user I want to be able to go online and order my food and drinks for collection at a specific time. 
+- As a frequent user I want to be able to get in touch with the company about a meeting room. This is easily done through either the find us section, or through the success message which supplies a phone number that can be contacted if more urgent assistance is needed. 
 
 ### Further Testing
 
