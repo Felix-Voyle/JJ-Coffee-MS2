@@ -463,7 +463,7 @@ a:link { text-decoration: none; }
   margin-left: auto;
   margin-right: 20%;
   position: relative;
-  top: 18rem;
+  top: 23rem;
   left: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -485,8 +485,11 @@ a:link { text-decoration: none; }
 }
 
 .meetings-info-txt {
-  position: relative;
+  position: absolute;
+  width: 90%;
   top: 50px;
+  left: 50%;
+  transform: translate(-50%, 10%);
   font-weight: 300;
   font-size: 16px;
   letter-spacing: 0.2px;
@@ -523,49 +526,22 @@ a:link { text-decoration: none; }
     margin-left: auto;
     margin-right: auto;
   }
+  .meetingRoom, .success-msg {
+    top: 25rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .meetingRoom {
-    position: absolute;
-    top: 50%;
+    top: 27rem;
   }
   .meetings-info-txt {
-    top: 6rem;
+    top: 2rem;
     font-size: 18px;
   }
   .meetings-info-txt-row {
     margin-bottom: 10px;
   }
-}
-
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    .meetingRoom {
-      top: 50%;
-    }
-    .meetings-info-txt {
-      top: 6rem;
-      font-size: 18px;
-    }
-    .meetings-info-txt-row {
-      margin-bottom: 10px;
-    }
-}
-
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-    .meetingRoom {
-      top: 16rem;
-    }
-    .meetings-info-txt {
-      top: 3rem;
-    }
 }
 
 /* ----- food and drinks menus-----*/
