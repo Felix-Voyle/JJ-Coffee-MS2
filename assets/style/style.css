@@ -51,15 +51,6 @@ a:link { text-decoration: none; }
     font-size: 13px;
   }
 
-  @media screen and (min-width: 992px) {
-    .footer {
-      position: absolute;
-      bottom: -6%;
-      left: 50%;
-      transform: translate(-50%);
-    } 
-  }
-
   /*-----burger-and-basket-icons----*/
   
   .burger-btn {
@@ -449,6 +440,7 @@ a:link { text-decoration: none; }
   }
   .hero-cards-group {
     transform: translate(0, 5%);
+    margin-top: 0;
   }
   .coffee-hero, .menu-hero, .find-us-hero, .meetings-hero {
   background: none;
