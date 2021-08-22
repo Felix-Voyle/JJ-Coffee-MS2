@@ -115,9 +115,49 @@ I have made a click and collect feature for the website although I don't know ho
 
 
 ### Bugs and Fixes 
+- I couldn't have two onsubmit events on my meetingR room form. So incorporating emailJS stopped my validate form working. This was easily fixed by adding my if else statements to the emailJS code. 
+
 
 ## Deployment
 ---
+### Github pages
+The project was deployed to Github pages using the following steps;
+1. Log in to GitHub, locate your chosen repository and select it.
+1. At the top of the repository (in it's menu) select the settings button.
+1. Scroll towards the bottom of the settings page and locate the "GitHub Pages" section.
+1. Under "Source", click the dropdown menu and select "Master Branch".
+1. The page then automatically refreshes itself.
+1. Scroll back down the page and there will now be a published site link within the "GitHub Pages" section.
+
+### Forking the GitHub Repository
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1. Log in to GitHub and locate the GitHub Repository
+1. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+1. You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+1. Log in to GitHub and locate the GitHub Repository
+1. Under the repository name, click "Clone or download".
+1. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+1. Open Git Bash
+1. Change the current working directory to the location where you want the cloned directory to be made.
+1. Type git clone, and then paste the URL you copied in Step 3.
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+```
+
+7. Press Enter. Your local clone will be created.
+
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
+
 
 ## Credits
 ---
@@ -129,12 +169,15 @@ I have made a click and collect feature for the website although I don't know ho
 - box-shadow effects - https://getcssscan.com/css-box-shadow-examples 
 
 
+
 ### Content
  
-
+- All content was written by the developer
 
 ### Media 
 
 - All images and video were sourced from pexels and were free to use. 
 
 ### Acknowledgements
+- https://www.w3schools.com/ and https://css-tricks.com/ were both invaluable resources for referring back to throughout.
+- https://stackoverflow.com/ was a great resource if i had any problems, often i could find the same or similar issue on here and get an idea for how to fix it.
