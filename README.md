@@ -208,3 +208,4 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ### Acknowledgements
 - https://www.w3schools.com/ and https://css-tricks.com/ were both invaluable resources for referring back to throughout.
 - https://stackoverflow.com/ was a great resource if i had any problems, often i could find the same or similar issue on here and get an idea for how to fix it.
+- My mentor for helping me throughout the process and pushing me forward.
