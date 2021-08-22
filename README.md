@@ -1,3 +1,5 @@
+<a href="https://ibb.co/gVsQRGG"><img src="https://i.ibb.co/HdmRH00/Screenshot-2021-08-21-at-11-28-31.png" alt="MS2 responsiveness" border="0" /></a>
+
 # Java Java Coffee
 
 Java Java coffee is a coffee company run inside co-working spaces. They not only have their doors open to the genral public, but also cater for in house meeting rooms. 
@@ -111,14 +113,36 @@ I have made a click and collect feature for the website although I don't know ho
 
 - The site was tested across multiple screen sizes and resolutions from small to larger phones, tablets, laptops and desktop monitors.
 
+- checked for performance 
+
+- All navigation links and social links were tested extensively to ensure they were working on each and every page, and went to the right place.
+
 - Friends and family tested the site and provided feedback. 
+
+- Used the W3C Markup Validator and W3C CSS Validator to check every page of the project to ensure there were no syntax errors.
+
+CSS Validation - [View](assets/validation/CSSvalidation.png)
+
+HTML Validation - index.html - [View](assets/validation/index.png)
+HTML Validation - coffee.html - [View](assets/validation/coffee.png)
+HTML Validation - food.html - [View](assets/validation/food.png)
+HTML Validation - meetings.html - [View](assets/validation/meetings.png)
+HTML Validation - findus.html - [View](assets/validation/findus.png)
+
+- Used Jshint as well as eslint to check for any Javascript errors
+
+- Used lighthouse in google chrome developer tools to test for performance, SEO, accessibility and best practices.
 
 
 ### Bugs and Fixes 
 
-- I couldn't have two onsubmit events on my meetingR room form. So incorporating emailJS stopped my validate form working. This was easily fixed by adding my if else statements to the emailJS code. 
+- I couldn't have two onsubmit events on my meeting room form. So incorporating emailJS stopped my validate form working. This was easily fixed by adding my if else statements to the emailJS code. Some parts are hoever validated through HTMl required and some through JS which throws up alerts making it not a completely consistent UX. I would look to fix this given more time. 
 
 - My cart items on load although all accurate and the same, aren't loaded back in the cart in the same order they were put into the cart. Ideally i would be able to fix this but didn't have the time. 
+
+- the time selector for the click and collect service gives 24 hours of options. This would need to be changed to only be between business opening hours.
+
+- I couldn't manage to add another marker by place ID therefore i just added one by location and input the correct values in. I would like to be able to fix this so its in place purely off the place ID.
 
 
 ## Deployment

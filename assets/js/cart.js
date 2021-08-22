@@ -195,7 +195,6 @@ function itemTotal() {
     var cartPriceTotal = document.getElementById('totalAmmount');
     var totalPrice = [];
     for (let item in items) {
-      let itemQty = (items[item].qty);
       let price = (items[item].qty) * (items[item].price);
       totalPrice.push(price);
       }
