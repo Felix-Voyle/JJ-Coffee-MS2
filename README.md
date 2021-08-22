@@ -115,7 +115,10 @@ I have made a click and collect feature for the website although I don't know ho
 
 
 ### Bugs and Fixes 
+
 - I couldn't have two onsubmit events on my meetingR room form. So incorporating emailJS stopped my validate form working. This was easily fixed by adding my if else statements to the emailJS code. 
+
+- My cart items on load although all accurate and the same, aren't loaded back in the cart in the same order they were put into the cart. Ideally i would be able to fix this but didn't have the time. 
 
 
 ## Deployment
