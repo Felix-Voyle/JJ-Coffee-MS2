@@ -130,10 +130,10 @@ a:link { text-decoration: none; }
     }
   
   .basket-info-container {
-    position: absolute;
+    position: fixed;
     min-height: 100%;
     background: #00000085;
-    top: 85px;
+    top: 0;
     right: 0;
     width: 0rem;
     z-index: 2;
