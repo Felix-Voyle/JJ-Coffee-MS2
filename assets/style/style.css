@@ -16,7 +16,7 @@ a:link { text-decoration: none; }
 
 .row {--bs-gutter-x: 0; }
 
-/*---header---*/
+/*---header/footer---*/
 .header {
     background-color: #272727;
     height:  85px;
@@ -38,6 +38,17 @@ a:link { text-decoration: none; }
     top: 53px;
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
+  }
+
+  .copyright {
+    color: #FDBE11;
+    font-size: 14px;
+  }
+
+  .brand-copyright {
+    font-style: oblique;
+    letter-spacing: 1.2px;
+    font-size: 13px;
   }
 
   /*-----burger-and-basket-icons----*/
@@ -119,13 +130,13 @@ a:link { text-decoration: none; }
     }
   
   .basket-info-container {
-    position: absolute;
+    position: fixed;
     min-height: 100%;
     background: #00000085;
-    top: 85px;
+    top: 0;
     right: 0;
     width: 0rem;
-    z-index: 2;
+    z-index: 3;
     overflow: hidden;
   }
   
@@ -151,10 +162,11 @@ a:link { text-decoration: none; }
   }
 
   .empty-crt-box {
-    background-color: white;
+    background-color: #f5f5f5;
     height: 50px;
     width: 268px;
     border: 2px solid #141414;
+    border-radius: 5px;
     position: absolute;
     left: 50%;
     top: 30%;
@@ -223,20 +235,36 @@ a:link { text-decoration: none; }
   }
 
   .cart-total-row {
-    position: absolute;
+    position: relative;
     bottom: 10px;
-    left: 38px;
+    left: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
   }
 
-  .ammountTotal {
-    margin-left: 15px;
-    font-weight: 400;
-    font-style: italic;
+  .collectTime {
+    height: 28px;
+    margin-right: 25px;
+    width: 85px;
+    position: absolute;
+    bottom: 10px;
+    background-color: #f5f5f5;
+    color: #141414;
+    border: 2px solid #141414;
+    border-radius: 5px;
   }
-  
-  .total-txt {
-    font-weight: bold;
-    letter-spacing: 1.4px;
+
+  .collectBtn {
+    margin-left: 15px;
+    height: 28px;
+    position: absolute;
+    right: 18px;
+    bottom: 10px;
+    background-color: #FDBE11;
+    font-size: 15px;
+    color: #141414;
+    border: 2px solid #141414;
+    border-radius: 5px;
   }
 
   @media screen and (min-width: 992px) {
@@ -389,7 +417,7 @@ a:link { text-decoration: none; }
     transition: 1s;
 }
 
-.caption-text, #nav-home, #nav-drinks, #nav-food, #nav-meetings, #nav-findus {
+.caption-text {
   font-family: 'Londrina Outline', cursive;
   color: white;
   font-size: 3rem;
@@ -409,6 +437,10 @@ a:link { text-decoration: none; }
     width: 25%;
     height: 80vh;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  }
+  .hero-cards-group {
+    transform: translate(0, 5%);
+    margin-top: 0;
   }
   .coffee-hero, .menu-hero, .find-us-hero, .meetings-hero {
   background: none;
@@ -617,7 +649,7 @@ margin-bottom: 10px;
   -moz-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  border: 10px solid white;
+  border: 10px solid #f5f5f5;
   overflow: auto;
   font-weight: 300;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -668,7 +700,7 @@ color: #FDBE11;
   transform: translateY(-50%);
   }
   .on-the-go .row, .left-extras .row, .right-extras .row, .coffee-left .row, .coffee-right .row, .other-hot-drinks .row, .cold-drinks .row {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     }
   .open-toasts-item {
     margin-top: 25px;

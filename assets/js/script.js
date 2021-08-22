@@ -1,3 +1,5 @@
+/* exported global_var */
+
 //burger icon animation and dropdown menu
 function burgerDropMenu() {
   var burger = document.getElementById('burger-menu');
@@ -38,6 +40,15 @@ function alternateMenu() {
   });
 
 }
+
+window.addEventListener('mouseup', function(event) {
+  var basketContainer = document.getElementById('basket-info-container');
+  var basketInfo = document.getElementById('basket-info');
+  if (event.target == basketContainer) {
+    basketContainer.classList.toggle('basket-show');
+    basketInfo.classList.toggle('basket-info-show');
+  }
+}); 
 
 $(document).ready(function(){ 
 alternateMenu();
